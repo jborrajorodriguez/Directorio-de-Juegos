@@ -56,5 +56,24 @@ public class FuncionesDirectorio {
         }
         
     }
+    /**
+     * Metodo selecionar Plataforma.
+     * 
+     * Este metodo mediante la introduccion de un tipo de consola devuelve un objeto de tipo Plataforma.
+     * @param plataforma
+     * @return 
+     */
+    public static Plataforma selectPlataforma(ArrayList <Plataforma> plataforma){
+        String tipo=IntroducirDatos.introducirString("Introduce un model el modelo de consola");
+        int i;
+        for(i=0;i<plataforma.size();i++){
+            if(plataforma.get(i).getTipo().equalsIgnoreCase(tipo)){
+                return plataforma.get(i);
+                
+            }
+        }
+        return plataforma.get(i);
+        
+    }
     
 }
