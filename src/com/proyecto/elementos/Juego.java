@@ -11,21 +11,20 @@ public class Juego{
     private Plataforma plataforma;
     private int añoLanzamiento, njugadores;
     private boolean dlcs, co_op, terminado;
-    
 
     public Juego(){
     }
 
-    public Juego(String titulo, String desarrollador, String descripcion, Plataforma plataforma, boolean dlcs, boolean co_op, boolean terminado, int añoLanzamiento, int njugadores){
+    public Juego(String titulo, String desarrollador, String descripcion, Plataforma plataforma, int añoLanzamiento, int njugadores, boolean dlcs, boolean co_op, boolean terminado){
         this.titulo=titulo;
         this.desarrollador=desarrollador;
         this.descripcion=descripcion;
         this.plataforma=plataforma;
+        this.añoLanzamiento=añoLanzamiento;
+        this.njugadores=njugadores;
         this.dlcs=dlcs;
         this.co_op=co_op;
         this.terminado=terminado;
-        this.añoLanzamiento=añoLanzamiento;
-        this.njugadores=njugadores;
     }
 
     public String getTitulo(){
