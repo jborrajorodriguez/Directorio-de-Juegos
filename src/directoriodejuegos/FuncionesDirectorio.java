@@ -126,5 +126,19 @@ public class FuncionesDirectorio {
             
         }
     }
+    /**
+     * Metodo buscar por coop.
+     * 
+     * Este metodo compara un boolean introducido con el valor coop de juegos.
+     * @param juego 
+     */
+    public static void buscarCoop(ArrayList <Juego> juego){
+        Boolean coop=IntroducirDatos.introducirBoolean("Tiene cooperativo");
+        for(int i=0;i<juego.size();i++){
+            if(juego.get(i).isCo_op()==coop){
+                System.out.println(juego.get(i).toString());
+            }
+        }    
+    }
     
 }
