@@ -3,6 +3,7 @@ package directoriodejuegos;
 import com.proyecto.elementos.Plataforma;
 import java.util.ArrayList;
 import com.proyecto.introducirdatos.IntroducirDatos;
+import com.proyecto.display.Display;
         
 
 /**
@@ -18,7 +19,7 @@ public class FuncionesDirectorio {
      * Este metodo añade objetos de tipo plataforma a un ArrayList
      * @param plataforma nombre del ArrayList
      */
-    public void añadirPlataforma(ArrayList <Plataforma> plataforma){
+    public static void añadirPlataforma(ArrayList <Plataforma> plataforma){
         String nom=IntroducirDatos.introducirString("Nombre de la plataforma");
         String tipo=IntroducirDatos.introducirString("Que tipo de consola tienes");
         String des=IntroducirDatos.introducirString("Introduce una pequeña descripción");
@@ -32,11 +33,28 @@ public class FuncionesDirectorio {
      * Este metodo muestra todas las plataformas que se encuentren en el ArrayList
      * @param plataforma 
      */
-    public void mostrarPlataformas(ArrayList <Plataforma> plataforma){
+    public static void mostrarPlataformas(ArrayList <Plataforma> plataforma){
         for(int i=0;i<plataforma.size();i++){
             System.out.println(plataforma.get(i).toString());
         }
             
+    }
+    /**
+     * Metodo buscar plataforma por año de salida
+     * 
+     * Este metodo pide un año y ese lo compara en la coleccion para así mostrar los que coincidan.
+     * @param plataforma 
+     */
+    public static void buscarPlataformaAñoSalida(ArrayList <Plataforma> plataforma){
+        int año=IntroducirDatos.introducirInt("Año de salida que quieres buscar");
+        for(int i=0;i<plataforma.size();i++){
+            if(plataforma.get(i).getAñoDeSalida()==año){
+                //System.out.println(plataforma.get(i).toString());
+                Display.mostrarMensaje(plataforma.get(i).toString());
+                
+            }
+        }
+        
     }
     
 }
