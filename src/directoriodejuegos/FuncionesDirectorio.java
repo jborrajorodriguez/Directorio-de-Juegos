@@ -57,6 +57,24 @@ public class FuncionesDirectorio {
         
     }
     /**
+     * Metodo buscar Plataforma por nombre.
+     * 
+     * Este metodo muestra las plataformas que coincidan con el nombre indicado.
+     * @param plataforma 
+     */
+    public static void buscarPlataformaPorNombre(ArrayList <Plataforma> plataforma){
+        String nombre=IntroducirDatos.introducirString("Nombre de la Plataforma");
+        for(int i=0;i<plataforma.size();i++){
+            if(plataforma.get(i).getNombre().equalsIgnoreCase(nombre)){
+                //System.out.println(plataforma.get(i).toString());
+                Display.mostrarMensaje(plataforma.get(i).toString());
+                
+            }
+        }
+        
+    }
+    
+    /**
      * Metodo selecionar Plataforma.
      * 
      * Este metodo mediante la introduccion de un tipo de consola devuelve un objeto de tipo Plataforma.
