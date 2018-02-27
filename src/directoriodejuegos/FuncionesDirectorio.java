@@ -4,6 +4,7 @@ import com.proyecto.elementos.Plataforma;
 import java.util.ArrayList;
 import com.proyecto.introducirdatos.IntroducirDatos;
 import com.proyecto.display.Display;
+import com.proyecto.elementos.Juego;
         
 
 /**
@@ -109,6 +110,21 @@ public class FuncionesDirectorio {
         }
         return plataforma.get(i);
         
+    }
+    /**
+     * Metodo buscar numero de jugadores.
+     * 
+     * Este metodo compara un numero introducido con el numero de jugadores de los juegos registrados.
+     * @param juego 
+     */
+    public static void buscarNumJugadores(ArrayList <Juego> juego){
+        int njugadores=IntroducirDatos.introducirInt("Introduce número de jugadores.");
+        for(int i=0;i<juego.size();i++){
+            if(juego.get(i).getNjugadores()==njugadores){
+                System.out.println(juego.get(i).toString());
+            }
+            
+        }
     }
     
 }
