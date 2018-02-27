@@ -73,6 +73,23 @@ public class FuncionesDirectorio {
         }
         
     }
+    /**
+     * Metodo buscar Plataforma por tipo
+     * 
+     * Este método muestra las plataformas que coincidan con el tipo indicado.
+     * @param plataforma 
+     */
+    public static void buscarPlataformaPorTipo(ArrayList <Plataforma> plataforma){
+        String tipo=IntroducirDatos.introducirString("Modelo de la Plataforma");
+        for(int i=0;i<plataforma.size();i++){
+            if(plataforma.get(i).getTipo().equalsIgnoreCase(tipo)){
+                //System.out.println(plataforma.get(i).toString());
+                Display.mostrarMensaje(plataforma.get(i).toString());
+                
+            }
+        }
+        
+    }
     
     /**
      * Metodo selecionar Plataforma.
