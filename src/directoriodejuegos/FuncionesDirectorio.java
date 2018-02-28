@@ -214,7 +214,7 @@ public class FuncionesDirectorio{
     }
 
     /**
-     * <<<<<<< ProyectoArturo Metodo para buscar los metodos por su año de
+     * Metodo para buscar los metodos por su año de
      * lazamiento
      *
      * @param ju ArrayList con los juegos
@@ -297,5 +297,20 @@ public class FuncionesDirectorio{
 
             }
         }
+    }
+    /**
+     * Metodo de modificar terminado
+     * 
+     * Este metodo añade un valor true al atributo terminado.
+     * @param juego 
+     */
+    public static void modificarTerminado(ArrayList<Juego> juego){
+        String titulo=IntroducirDatos.introducirString("Introduce el titulo del juego");
+        for(int i=0; i<juego.size(); i++){
+                if(juego.get(i).getTitulo().equalsIgnoreCase(titulo)){
+                    juego.get(i).setTerminado(true);
+                }
+            }
+        
     }
 }
