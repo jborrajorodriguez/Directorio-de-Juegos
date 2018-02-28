@@ -33,7 +33,7 @@ public class FuncionesDirectorio{
         String tit=IntroducirDatos.introducirString("Titulo del juego");
         String des=IntroducirDatos.introducirString("Desarrollador del juego");
         String descr=IntroducirDatos.introducirString("Introduce una descripcion");
-        Plataforma plat=null;
+        Plataforma plat=FuncionesDirectorio.selectPlataforma();
         int añlan=IntroducirDatos.introducirInt("Año de lanzamiento del juego");
         int njug=IntroducirDatos.introducirInt("Cuantos jugadores?");
         String dlc=IntroducirDatos.introducirString("Tiene dlc's");
@@ -76,12 +76,14 @@ public class FuncionesDirectorio{
             String linea;
             String[] lista=new String[12];
             Juego jug;
+            Plataforma pl;
             try{
-                sc=new Scanner(new File("libreria.txt"));
+                sc=new Scanner(new File("FJuegos.txt"));
                 while(sc.hasNextLine()){
                     linea=sc.nextLine();
                     lista=linea.split(",");
-                    jug=new Juego(lista[0], lista[1], lista[2], new Plataforma(lista[3], lista[4], lista[5], Integer.parseInt(lista[6])), Integer.parseInt(lista[7]), Integer.parseInt(lista[8]), lista[9], lista[10], lista[11]);
+                    pl=new Plataforma(lista[3], lista[4], lista[5], Integer.parseInt(lista[6]));
+                    jug=new Juego(lista[0], lista[1], lista[2], pl , Integer.parseInt(lista[7]), Integer.parseInt(lista[8]), lista[9], lista[10], lista[11]);
                     juegos.add(jug);
                 }
             }catch(FileNotFoundException ex){
@@ -166,6 +168,7 @@ public class FuncionesDirectorio{
             for(int i=0; i<juegos.size(); i++){
                 juego=juegos.get(i);
                 escribir.println(juego.getTitulo()+","+juego.getDesarrollador()+","+juego.getDescripcion()+","+juego.getPlataforma().getNombre()
+                        +","+juego.getPlataforma().getTipo()+","+juego.getPlataforma().getDescripcion()+","+juego.getPlataforma().getAñoDeSalida()
                         +","+juego.getAñoLanzamiento()+","+juego.getNjugadores()+","+juego.getDlcs()+","+juego.getCo_op()+","+juego.getTerminado());
             }
         }catch(FileNotFoundException ex){
@@ -317,7 +320,7 @@ public class FuncionesDirectorio{
      * @return Objeto de tipo plataforma
      */
     public static Plataforma selectPlataforma(){
-        String tipo=IntroducirDatos.introducirString("Introduce un model el modelo de consola");
+        String tipo=IntroducirDatos.introducirString("Introduce el Modelo de consola");
         int i;
         for(i=0; i<plataformas.size(); i++){
             if(plataformas.get(i).getTipo().equalsIgnoreCase(tipo)){
