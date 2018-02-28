@@ -10,12 +10,12 @@ public class Juego{
     private String titulo, desarrollador, descripcion;
     private Plataforma plataforma;
     private int añoLanzamiento, njugadores;
-    private boolean dlcs, co_op, terminado;
+    private String dlcs, co_op, terminado;
 
     public Juego(){
     }
 
-    public Juego(String titulo, String desarrollador, String descripcion, Plataforma plataforma, int añoLanzamiento, int njugadores, boolean dlcs, boolean co_op, boolean terminado){
+    public Juego(String titulo, String desarrollador, String descripcion, Plataforma plataforma, int añoLanzamiento, int njugadores, String dlcs, String co_op, String terminado){
         this.titulo=titulo;
         this.desarrollador=desarrollador;
         this.descripcion=descripcion;
@@ -59,27 +59,27 @@ public class Juego{
         this.plataforma=plataforma;
     }
 
-    public boolean isDlcs(){
+    public String getDlcs(){
         return dlcs;
     }
 
-    public void setDlcs(boolean dlcs){
+    public void setDlcs(String dlcs){
         this.dlcs=dlcs;
     }
 
-    public boolean isCo_op(){
+    public String getCo_op(){
         return co_op;
     }
 
-    public void setCo_op(boolean co_op){
+    public void setCo_op(String co_op){
         this.co_op=co_op;
     }
 
-    public boolean isTerminado(){
+    public String getTerminado(){
         return terminado;
     }
 
-    public void setTerminado(boolean terminado){
+    public void setTerminado(String terminado){
         this.terminado=terminado;
     }
 
