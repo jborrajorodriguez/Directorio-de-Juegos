@@ -21,7 +21,8 @@ public class Selector {
                     +"*-3 : Buscar\n"
                     +"*-4 : Añadir juego\n"
                     +"*-5 : Añadir plataforma\n"
-                    +"*-6 : Modificar terminado\n\n");
+                    +"*-6 : Modificar terminado\n"
+                    +"*-0 : Salir\n\n");
             switch (opcion) {
                 case 1:
                     FuncionesDirectorio.mostrarJuegos();
@@ -41,8 +42,9 @@ public class Selector {
                 case 6:
                     FuncionesDirectorio.modificarTerminado();
                     break;
-                default:
-                    Display.mostrarMensaje("Esa opcion no es correcta.");
+                case 0:break;
+                //default:
+                    //Display.mostrarMensaje("Esa opcion no es correcta.");
             }
         }
         while (opcion!=0);
@@ -55,7 +57,8 @@ public class Selector {
         do {
             opcion=IntroducirDatos.introducirInt("********** Elige la Opcion **********\n\n"
                     +"*-1 : Busqueda por Juegos\n"
-                    +"*-2 : Busqueda por Plataformas\n\n");
+                    +"*-2 : Busqueda por Plataformas\n"
+                    +"*-3 : Volver al menú anterior\n\n");
             switch (opcion) {
                 case 1:
                     this.selectorBusquedaPorJuego();
@@ -63,14 +66,18 @@ public class Selector {
                 case 2:
                     this.selectorBusquedaPorPlataforma();
                     break;
+                case 3:this.selector();
+                break;
+                //case 0:break;
 
                 default:
                     Display.mostrarMensaje("Esa opcion no es correcta.");
             }
         }
-        while (opcion!=0);
+        while (opcion!=3);
 
     }
+
     //Selector de busqueda por juegos.
     public void selectorBusquedaPorJuego() {
         int opcion;
@@ -83,7 +90,8 @@ public class Selector {
                     +"*-5 : Busqueda por Número de jugadores\n"
                     +"*-6 : Busqueda por CO-OP\n"
                     +"*-7 : Busqueda por Juego Terminado\n"
-                    +"*-8 : Busqueda por Contenido descargable\n\n");
+                    +"*-8 : Busqueda por Contenido descargable\n"
+                    +"*-9 : Volver al menú anterior\n\n");
             switch (opcion) {
                 case 1:
                     FuncionesDirectorio.buscarTitulo();
@@ -109,6 +117,9 @@ public class Selector {
                 case 8:
                     FuncionesDirectorio.buscarPorDLC();
                     break;
+                case 9:this.selectorBuscar();
+                break;
+                case 0:break;
 
                 default:
                     Display.mostrarMensaje("Esa opcion no es correcta.");
@@ -116,21 +127,31 @@ public class Selector {
         }
         while (opcion!=0);
     }
+
     //Selector de busqueda por plataforma.
-    public void selectorBusquedaPorPlataforma(){
+    public void selectorBusquedaPorPlataforma() {
         int opcion;
         do {
             opcion=IntroducirDatos.introducirInt("********** Busqueda por Plataforma **********\n\n"
                     +"*-1 : Busqueda por Nombre\n"
-                    +"*-2 : Busqueda por Año de Salida"
-                    +"*-3 : Busqueda por Modelo de plataforma\n\n");
+                    +"*-2 : Busqueda por Año de Salida\n"
+                    +"*-3 : Busqueda por Modelo de plataforma\n"
+                    +"*-4 : Volver al menú anterior\n\n");
             switch (opcion) {
-                case 1:FuncionesDirectorio.buscarPlataformaPorNombre();
+                case 1:
+                    FuncionesDirectorio.buscarPlataformaPorNombre();
                     break;
-                case 2:FuncionesDirectorio.buscarPlataformaAñoSalida();
+                case 2:
+                    FuncionesDirectorio.buscarPlataformaAñoSalida();
                     break;
-                case 3:FuncionesDirectorio.buscarPlataformaPorTipo();
-                    break;    
+                case 3:
+                    FuncionesDirectorio.buscarPlataformaPorTipo();
+                    break;
+                case 4:
+                    this.selectorBuscar();
+                    break;
+                case 0:
+                    break;
 
                 default:
                     Display.mostrarMensaje("Esa opcion no es correcta.");
@@ -138,7 +159,5 @@ public class Selector {
         }
         while (opcion!=0);
     }
-    
-    
 
 }
