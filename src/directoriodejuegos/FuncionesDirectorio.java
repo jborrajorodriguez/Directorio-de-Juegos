@@ -42,6 +42,11 @@ public class FuncionesDirectorio{
         juegos.add(new Juego(tit, des, descr, plat, añlan, njug, dlc, coop, term));
     }
 
+    /**
+     * Metodo para comprobar que existen los ficheros y leer de ellos al inicio
+     * del programa o crearlos si no existen
+     *
+     */
     public static void crearFicheros(){
         ficheroJuegos=new File("FJuegos.txt");
         ficheroPlataformas=new File("FPlataformas.txt");
@@ -86,10 +91,16 @@ public class FuncionesDirectorio{
             }
             sc.close();
         }else{
+            FuncionesDirectorio.añadirJuego();
+            FuncionesDirectorio.guardarJuegos();
         }
 
     }
 
+    /**
+     * Metodo para guardar la informacion en los ficheros
+     *
+     */
     public static void guardarFicheros(){
         ficheroPlataformas=new File("FPlataformas.txt");
         try{
@@ -123,6 +134,10 @@ public class FuncionesDirectorio{
         }
     }
 
+    /**
+     * Metodo para guardar la informacion de las plataformas en el fichero
+     *
+     */
     public static void guardarPlatafomas(){
         ficheroPlataformas=new File("FPlataformas.txt");
         try{
@@ -140,6 +155,10 @@ public class FuncionesDirectorio{
         }
     }
 
+    /**
+     * Metodo para guardar la informacion de los juegos en el fichero
+     *
+     */
     public static void guardarJuegos(){
         ficheroJuegos=new File("FJuegos.txt");
         try{
@@ -311,7 +330,9 @@ public class FuncionesDirectorio{
     }
 
     /**
-     * Metodo buscar numero de jugadores. Este metodo compara un numero
+     * Metodo buscar numero de jugadores.
+     * 
+     * Este metodo compara un numero
      * introducido con el numero de jugadores de los juegos registrados.
      *
      */
@@ -339,7 +360,9 @@ public class FuncionesDirectorio{
     }
 
     /**
-     * Metodo buscar por dlc . Este metodo compara un boolean introducido con el
+     * Metodo buscar por dlc.
+     * 
+     * Este metodo compara un boolean introducido con el
      * valor dlc de juegos .
      *
      */
