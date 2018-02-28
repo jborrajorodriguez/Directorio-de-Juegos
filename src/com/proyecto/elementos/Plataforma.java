@@ -51,7 +51,7 @@ public class Plataforma {
 
     @Override
     public String toString() {
-        return ("Nombre : "+nombre+"\nTipo : "+tipo+"\nDescripcion : "+descripcion+"\nAño de salida : "+añoDeSalida);
+        return ("Nombre : "+nombre+"\nTipo : "+tipo+"\nDescripcion : "+descripcion+"\nAño de salida : "+añoDeSalida+"\n");
     }
    
    
