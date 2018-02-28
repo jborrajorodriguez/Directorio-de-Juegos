@@ -21,7 +21,7 @@ public class Selector {
                     + "*-5 : Añadir plataforma"
                     + "*-6 : Modificar terminado");
             switch(opcion){
-                case 1:FuncionesDirectorio.mostrarJuegos();
+                //case 1:FuncionesDirectorio.mostrarJuegos();
                 
             }
         }
