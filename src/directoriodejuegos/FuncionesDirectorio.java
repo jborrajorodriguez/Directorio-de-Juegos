@@ -8,6 +8,7 @@ import com.proyecto.introducirdatos.IntroducirDatos;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 /**
  * Clase Funciones del directorio.
@@ -20,6 +21,7 @@ public class FuncionesDirectorio{
     private static ArrayList<Plataforma> plataformas=new ArrayList();
     private static File ficheroJuegos, ficheroPlataformas;
     private static PrintWriter escribir;
+    private static Scanner sc;
     private static Juego juego;
     private static Plataforma plataforma;
 
@@ -43,7 +45,49 @@ public class FuncionesDirectorio{
     public static void crearFicheros(){
         ficheroJuegos=new File("FJuegos.txt");
         ficheroPlataformas=new File("FPlataformas.txt");
-        
+        if(ficheroPlataformas.exists()){
+            String linea;
+            String[] lista=new String[4];
+            Plataforma pla;
+            try{
+                sc=new Scanner(new File("FPlataformas.txt"));
+                while(sc.hasNextLine()){
+                    linea=sc.nextLine();
+                    lista=linea.split(",");
+                    pla=new Plataforma(lista[0], lista[1], lista[2], Integer.parseInt(lista[3]));
+                    plataformas.add(pla);
+                }
+            }catch(FileNotFoundException ex){
+                System.out.println("Erro 1 "+ex.getMessage());
+            }catch(NullPointerException ex){
+                System.out.println("Erro 2 "+ex.getMessage()+"\nNo se puede leer de un fichero vacio");
+            }
+            sc.close();
+        }else{
+            FuncionesDirectorio.añadirPlataforma();
+            FuncionesDirectorio.guardarPlatafomas();
+        }
+        if(ficheroJuegos.exists()){
+            String linea;
+            String[] lista=new String[12];
+            Juego jug;
+            try{
+                sc=new Scanner(new File("libreria.txt"));
+                while(sc.hasNextLine()){
+                    linea=sc.nextLine();
+                    lista=linea.split(",");
+                    jug=new Juego(lista[0], lista[1], lista[2], new Plataforma(lista[3], lista[4], lista[5], Integer.parseInt(lista[6])), Integer.parseInt(lista[7]), Integer.parseInt(lista[8]), lista[9], lista[10], lista[11]);
+                    juegos.add(jug);
+                }
+            }catch(FileNotFoundException ex){
+                System.out.println("Erro 1 "+ex.getMessage());
+            }catch(NullPointerException ex){
+                System.out.println("Erro 2 "+ex.getMessage()+"\nNo se puede leer de un fichero vacio");
+            }
+            sc.close();
+        }else{
+        }
+
     }
 
     public static void guardarFicheros(){
@@ -61,6 +105,42 @@ public class FuncionesDirectorio{
         }finally{
             escribir.close();
         }
+        ficheroJuegos=new File("FJuegos.txt");
+        try{
+            escribir=new PrintWriter(ficheroJuegos);
+            for(int i=0; i<juegos.size(); i++){
+                juego=juegos.get(i);
+                escribir.println(juego.getTitulo()+","+juego.getDesarrollador()+","+juego.getDescripcion()+","+juego.getPlataforma().getNombre()
+                        +","+juego.getPlataforma().getTipo()+","+juego.getPlataforma().getDescripcion()+","+juego.getPlataforma().getAñoDeSalida()
+                        +","+juego.getAñoLanzamiento()+","+juego.getNjugadores()+","+juego.getDlcs()+","+juego.getCo_op()+","+juego.getTerminado());
+            }
+        }catch(FileNotFoundException ex){
+            System.out.println("Erro 1 "+ex.getMessage());
+        }catch(NullPointerException ex){
+            System.out.println("Erro 2 "+ex.getMessage()+"\nNo se puede leer de un fichero vacio");
+        }finally{
+            escribir.close();
+        }
+    }
+
+    public static void guardarPlatafomas(){
+        ficheroPlataformas=new File("FPlataformas.txt");
+        try{
+            escribir=new PrintWriter(ficheroPlataformas);
+            for(int i=0; i<plataformas.size(); i++){
+                plataforma=plataformas.get(i);
+                escribir.println(plataforma.getNombre()+","+plataforma.getTipo()+","+plataforma.getDescripcion()+","+plataforma.getAñoDeSalida());
+            }
+        }catch(FileNotFoundException ex){
+            System.out.println("Erro 1 "+ex.getMessage());
+        }catch(NullPointerException ex){
+            System.out.println("Erro 2 "+ex.getMessage()+"\nNo se puede leer de un fichero vacio");
+        }finally{
+            escribir.close();
+        }
+    }
+
+    public static void guardarJuegos(){
         ficheroJuegos=new File("FJuegos.txt");
         try{
             escribir=new PrintWriter(ficheroJuegos);
@@ -335,7 +415,7 @@ public class FuncionesDirectorio{
         for(int i=0; i<juegos.size(); i++){
             if(juegos.get(i).getTitulo().equalsIgnoreCase(titulo)){
                 juegos.get(i).setTerminado("si");
-                
+
             }
         }
 
