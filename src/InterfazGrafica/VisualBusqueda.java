@@ -49,7 +49,6 @@ public class VisualBusqueda extends javax.swing.JFrame{
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Busqueda");
-        setAlwaysOnTop(true);
         setLocation(new java.awt.Point(200, 200));
         setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
