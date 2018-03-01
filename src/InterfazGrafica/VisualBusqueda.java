@@ -16,6 +16,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
      */
     public VisualBusqueda(){
         initComponents();
+        
     }
 
     /**
