@@ -18,6 +18,7 @@ public class Visual extends javax.swing.JFrame {
      */
     public Visual() {
         initComponents();
+        FuncionesDirectorio.crearFicheros();
     }
 
     /**
@@ -40,6 +41,8 @@ public class Visual extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(190, 190));
+        setMaximumSize(new java.awt.Dimension(800, 600));
         setResizable(false);
 
         jPanel1.setBackground(java.awt.SystemColor.activeCaption);
@@ -53,7 +56,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(290, 370, 240, 32);
+        jButton2.setBounds(290, 370, 240, 33);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 62)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -61,7 +64,7 @@ public class Visual extends javax.swing.JFrame {
         jLabel1.setText("Directorio de Juegos");
         jLabel1.setToolTipText("");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(40, 30, 720, 73);
+        jLabel1.setBounds(40, 30, 720, 79);
 
         jButton4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton4.setText("Buscar");
@@ -71,7 +74,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(290, 410, 240, 32);
+        jButton4.setBounds(290, 410, 240, 33);
 
         jButton3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton3.setText("Añadir Plataforma");
@@ -81,7 +84,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(290, 290, 240, 32);
+        jButton3.setBounds(290, 290, 240, 33);
 
         jButton5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton5.setText("Juego Terminado");
@@ -91,7 +94,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(290, 450, 240, 32);
+        jButton5.setBounds(290, 450, 240, 33);
 
         jButton6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton6.setText("Añadir juego");
@@ -111,7 +114,7 @@ public class Visual extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(290, 330, 240, 30);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/home/local/DANIELCASTELAO/jborrajorodriguez/Documentos/Valhala/DirectorioDeJuegos/fondo.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/fondo.jpg"))); // NOI18N
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jPanel1.add(jLabel2);
         jLabel2.setBounds(0, 0, 800, 600);
@@ -138,18 +141,22 @@ public class Visual extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
        FuncionesDirectorio.añadirJuego();
+       FuncionesDirectorio.guardarJuegos();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
       FuncionesDirectorio.añadirPlataforma();
+      FuncionesDirectorio.guardarPlatafomas();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        VisualBusqueda vb=new VisualBusqueda();
+        vb.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         FuncionesDirectorio.modificarTerminado();
+        FuncionesDirectorio.guardarFicheros();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
