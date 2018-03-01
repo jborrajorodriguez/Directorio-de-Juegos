@@ -109,7 +109,7 @@ public class FuncionesDirectorio{
             escribir=new PrintWriter(ficheroPlataformas);
             for(int i=0; i<plataformas.size(); i++){
                 plataforma=plataformas.get(i);
-                escribir.println(plataforma.getNombre()+","+plataforma.getTipo()+","+plataforma.getDescripcion()+","+plataforma.getAñoDeSalida());
+                escribir.println(plataforma.getNombre()+","+plataforma.getModelo()+","+plataforma.getDescripcion()+","+plataforma.getAñoDeSalida());
             }
         }catch(FileNotFoundException ex){
             System.out.println("Erro 1 "+ex.getMessage());
@@ -124,7 +124,7 @@ public class FuncionesDirectorio{
             for(int i=0; i<juegos.size(); i++){
                 juego=juegos.get(i);
                 escribir.println(juego.getTitulo()+","+juego.getDesarrollador()+","+juego.getDescripcion()+","+juego.getPlataforma().getNombre()
-                        +","+juego.getPlataforma().getTipo()+","+juego.getPlataforma().getDescripcion()+","+juego.getPlataforma().getAñoDeSalida()
+                        +","+juego.getPlataforma().getModelo()+","+juego.getPlataforma().getDescripcion()+","+juego.getPlataforma().getAñoDeSalida()
                         +","+juego.getAñoLanzamiento()+","+juego.getNjugadores()+","+juego.getDlcs()+","+juego.getCo_op()+","+juego.getTerminado());
             }
         }catch(FileNotFoundException ex){
@@ -146,7 +146,7 @@ public class FuncionesDirectorio{
             escribir=new PrintWriter(ficheroPlataformas);
             for(int i=0; i<plataformas.size(); i++){
                 plataforma=plataformas.get(i);
-                escribir.println(plataforma.getNombre()+","+plataforma.getTipo()+","+plataforma.getDescripcion()+","+plataforma.getAñoDeSalida());
+                escribir.println(plataforma.getNombre()+","+plataforma.getModelo()+","+plataforma.getDescripcion()+","+plataforma.getAñoDeSalida());
             }
         }catch(FileNotFoundException ex){
             System.out.println("Erro 1 "+ex.getMessage());
@@ -168,7 +168,7 @@ public class FuncionesDirectorio{
             for(int i=0; i<juegos.size(); i++){
                 juego=juegos.get(i);
                 escribir.println(juego.getTitulo()+","+juego.getDesarrollador()+","+juego.getDescripcion()+","+juego.getPlataforma().getNombre()
-                        +","+juego.getPlataforma().getTipo()+","+juego.getPlataforma().getDescripcion()+","+juego.getPlataforma().getAñoDeSalida()
+                        +","+juego.getPlataforma().getModelo()+","+juego.getPlataforma().getDescripcion()+","+juego.getPlataforma().getAñoDeSalida()
                         +","+juego.getAñoLanzamiento()+","+juego.getNjugadores()+","+juego.getDlcs()+","+juego.getCo_op()+","+juego.getTerminado());
             }
         }catch(FileNotFoundException ex){
@@ -186,7 +186,7 @@ public class FuncionesDirectorio{
      */
     public static void mostrarJuegos(){
         for(int i=0; i<juegos.size(); i++){
-            System.out.println(juegos.get(i).toString());
+            System.out.println(juegos.get(i).getTitulo()+" "+juegos.get(i).getDesarrollador()+" "+juegos.get(i).getPlataforma().getNombre());
         }
     }
 
@@ -198,7 +198,7 @@ public class FuncionesDirectorio{
         String titulo=IntroducirDatos.introducirString("Titulo del juego a buscar?");
         for(int i=0; i<juegos.size(); i++){
             if(titulo.equalsIgnoreCase(juegos.get(i).getTitulo())){
-                Display.mostrarMensaje(juegos.get(i).toString());
+                Display.mostrarMensaje(juegos.get(i).toString()+"\n");
             }
         }
     }
@@ -211,7 +211,7 @@ public class FuncionesDirectorio{
         String desarr=IntroducirDatos.introducirString("Desarrollador del juego a buscar?");
         for(int i=0; i<juegos.size(); i++){
             if(desarr.equalsIgnoreCase(juegos.get(i).getDesarrollador())){
-                System.out.println(juegos.get(i).toString());
+                System.out.println(juegos.get(i).toString()+"\n");
             }
         }
     }
@@ -224,7 +224,7 @@ public class FuncionesDirectorio{
         String nombre=IntroducirDatos.introducirString("Nombre de la plataforma");
         for(int i=0; i<juegos.size(); i++){
             if(nombre.equalsIgnoreCase(juegos.get(i).getPlataforma().getNombre())){
-                System.out.println(juegos.get(i).toString());
+                System.out.println(juegos.get(i).toString()+"\n");
             }
         }
     }
@@ -253,7 +253,7 @@ public class FuncionesDirectorio{
      */
     public static void mostrarPlataformas(){
         for(int i=0; i<plataformas.size(); i++){
-            System.out.println(plataformas.get(i).toString());
+            System.out.println(plataformas.get(i).getNombre()+" "+plataformas.get(i).getModelo());
         }
 
     }
@@ -270,7 +270,7 @@ public class FuncionesDirectorio{
         for(int i=0; i<plataformas.size(); i++){
             if(plataformas.get(i).getAñoDeSalida()==año){
                 //System.out.println(plataforma.get(i).toString());
-                Display.mostrarMensaje(plataformas.get(i).toString());
+                Display.mostrarMensaje(plataformas.get(i).toString()+"\n");
 
             }
         }
@@ -288,7 +288,7 @@ public class FuncionesDirectorio{
         for(int i=0; i<plataformas.size(); i++){
             if(plataformas.get(i).getNombre().equalsIgnoreCase(nombre)){
                 //System.out.println(plataforma.get(i).toString());
-                Display.mostrarMensaje(plataformas.get(i).toString());
+                Display.mostrarMensaje(plataformas.get(i).toString()+"\n");
 
             }
         }
@@ -304,9 +304,9 @@ public class FuncionesDirectorio{
     public static void buscarPlataformaPorTipo(){
         String tipo=IntroducirDatos.introducirString("Modelo de la Plataforma");
         for(int i=0; i<plataformas.size(); i++){
-            if(plataformas.get(i).getTipo().equalsIgnoreCase(tipo)){
+            if(plataformas.get(i).getModelo().equalsIgnoreCase(tipo)){
                 //System.out.println(plataforma.get(i).toString());
-                Display.mostrarMensaje(plataformas.get(i).toString());
+                Display.mostrarMensaje(plataformas.get(i).toString()+"\n");
 
             }
         }
@@ -323,7 +323,7 @@ public class FuncionesDirectorio{
         String tipo=IntroducirDatos.introducirString("Introduce el Modelo de consola");
         int i;
         for(i=0; i<plataformas.size(); i++){
-            if(plataformas.get(i).getTipo().equalsIgnoreCase(tipo)){
+            if(plataformas.get(i).getModelo().equalsIgnoreCase(tipo)){
                 return plataformas.get(i);
 
             }
@@ -343,7 +343,7 @@ public class FuncionesDirectorio{
         int njugadores=IntroducirDatos.introducirInt("Introduce número de jugadores.");
         for(int i=0; i<juegos.size(); i++){
             if(juegos.get(i).getNjugadores()==njugadores){
-                System.out.println(juegos.get(i).toString());
+                System.out.println(juegos.get(i).toString()+"\n");
             }
 
         }
@@ -357,7 +357,7 @@ public class FuncionesDirectorio{
         int año=IntroducirDatos.introducirInt("Año de lanzamiento del juego buscar?");
         for(int i=0; i<juegos.size(); i++){
             if(juegos.get(i).getAñoLanzamiento()==año){
-                System.out.println(juegos.get(i).toString());
+                System.out.println(juegos.get(i).toString()+"\n");
             }
         }
     }
@@ -373,7 +373,7 @@ public class FuncionesDirectorio{
         String coop=IntroducirDatos.introducirString("Tiene cooperativo");
         for(int i=0; i<juegos.size(); i++){
             if(juegos.get(i).getCo_op()==coop){
-                System.out.println(juegos.get(i).toString());
+                System.out.println(juegos.get(i).toString()+"\n");
             }
         }
     }
@@ -391,13 +391,13 @@ public class FuncionesDirectorio{
         if(terminado.equalsIgnoreCase("Si")){
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getTerminado().equalsIgnoreCase(terminado)){
-                    System.out.println(juegos.get(i).toString());
+                    System.out.println(juegos.get(i).toString()+"\n");
                 }
             }
         }else{
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getTerminado().equalsIgnoreCase(terminado)){
-                    System.out.println(juegos.get(i).toString());
+                    System.out.println(juegos.get(i).toString()+"\n");
                 }
 
             }
@@ -417,13 +417,13 @@ public class FuncionesDirectorio{
         if(dlc.equalsIgnoreCase("Si")){
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getDlcs().equalsIgnoreCase(dlc)){
-                    System.out.println(juegos.get(i).toString());
+                    System.out.println(juegos.get(i).toString()+"\n");
                 }
             }
         }else{
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getDlcs().equalsIgnoreCase(dlc)){
-                    System.out.println(juegos.get(i).toString());
+                    System.out.println(juegos.get(i).toString()+"\n");
                 }
 
             }
