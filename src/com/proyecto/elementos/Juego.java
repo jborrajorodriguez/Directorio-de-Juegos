@@ -103,6 +103,6 @@ public class Juego{
     public String toString(){
         return ("Titulo: "+titulo+"\nDesarrollador: "+desarrollador+"\nDescripción: "+descripcion+"\nPlataforma: "+plataforma
                 +"\nAño de Lanzamiento: "+añoLanzamiento+"\nNº jugadores: "+njugadores+"\nDLC's: "+dlcs+"\nCooperativo: "+co_op
-                +"\nTerminado: "+terminado+"\n");
+                +"\nTerminado: "+terminado);
     }
 }

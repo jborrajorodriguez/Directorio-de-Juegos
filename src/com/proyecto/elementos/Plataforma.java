@@ -4,7 +4,7 @@ package com.proyecto.elementos;
  */
 public class Plataforma {
     
-   private String nombre,tipo,descripcion;
+   private String nombre,modelo,descripcion;
    private int añoDeSalida;
 
     public Plataforma() {
@@ -12,7 +12,7 @@ public class Plataforma {
 
     public Plataforma(String nombre,String tipo,String descripcion,int añoDeSalida) {
         this.nombre=nombre;
-        this.tipo=tipo;
+        this.modelo=tipo;
         this.descripcion=descripcion;
         this.añoDeSalida=añoDeSalida;
     }
@@ -25,12 +25,12 @@ public class Plataforma {
         this.nombre=nombre;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getModelo() {
+        return modelo;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo=tipo;
+    public void setModelo(String modelo) {
+        this.modelo=modelo;
     }
 
     public String getDescripcion() {
@@ -51,7 +51,7 @@ public class Plataforma {
 
     @Override
     public String toString() {
-        return ("Nombre : "+nombre+"\nTipo : "+tipo+"\nDescripcion : "+descripcion+"\nAño de salida : "+añoDeSalida+"\n");
+        return ("Nombre : "+nombre+"\nTipo : "+modelo+"\nDescripcion : "+descripcion+"\nAño de salida : "+añoDeSalida);
     }
    
    
