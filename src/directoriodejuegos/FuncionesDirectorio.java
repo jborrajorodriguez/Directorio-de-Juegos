@@ -370,7 +370,7 @@ public class FuncionesDirectorio{
      *
      */
     public static void buscarCoop(){
-        String coop=IntroducirDatos.introducirString("Tiene cooperativo");
+        String coop=IntroducirDatos.introducirString("Tiene cooperativo?");
         for(int i=0; i<juegos.size(); i++){
             if(juegos.get(i).getCo_op()==coop){
                 System.out.println(juegos.get(i).toString()+"\n");
@@ -387,7 +387,7 @@ public class FuncionesDirectorio{
      */
     public static void buscarPorTerminado(){
 
-        String terminado=IntroducirDatos.introducirString("Tienes acabado el juego");
+        String terminado=IntroducirDatos.introducirString("Tienes acabado el juego?");
         if(terminado.equalsIgnoreCase("Si")){
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getTerminado().equalsIgnoreCase(terminado)){
@@ -413,7 +413,7 @@ public class FuncionesDirectorio{
      */
     public static void buscarPorDLC(){
 
-        String dlc=IntroducirDatos.introducirString("Tienes acabado el juego");
+        String dlc=IntroducirDatos.introducirString("El juego tiene Dlc?");
         if(dlc.equalsIgnoreCase("Si")){
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getDlcs().equalsIgnoreCase(dlc)){
