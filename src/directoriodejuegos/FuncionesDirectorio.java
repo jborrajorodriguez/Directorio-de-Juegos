@@ -237,10 +237,10 @@ public class FuncionesDirectorio{
      */
     public static void añadirPlataforma(){
         String nom=IntroducirDatos.introducirString("Nombre de la plataforma");
-        String tipo=IntroducirDatos.introducirString("Que tipo de consola tienes");
+        String modelo=IntroducirDatos.introducirString("Que Modelo de consola tienes");
         String des=IntroducirDatos.introducirString("Introduce una pequeña descripción");
         int año=IntroducirDatos.introducirInt("Año de la "+nom);
-        plataformas.add(new Plataforma(nom, tipo, des, año));
+        plataformas.add(new Plataforma(nom, modelo, des, año));
 
     }
 
@@ -301,7 +301,7 @@ public class FuncionesDirectorio{
      * Este método muestra las plataformas que coincidan con el tipo indicado.
      *
      */
-    public static void buscarPlataformaPorTipo(){
+    public static void buscarPlataformaPorModelo(){
         String tipo=IntroducirDatos.introducirString("Modelo de la Plataforma");
         for(int i=0; i<plataformas.size(); i++){
             if(plataformas.get(i).getModelo().equalsIgnoreCase(tipo)){
