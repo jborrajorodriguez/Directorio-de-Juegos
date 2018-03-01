@@ -5,6 +5,8 @@
  */
 package InterfazGrafica;
 
+import directoriodejuegos.FuncionesDirectorio;
+
 /**
  *
  * @author Arturo
@@ -28,20 +30,21 @@ public class VisualBusqueda extends javax.swing.JFrame{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jButton10 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         jButton11 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -53,22 +56,63 @@ public class VisualBusqueda extends javax.swing.JFrame{
         setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
         setSize(new java.awt.Dimension(800, 600));
-        getContentPane().setLayout(null);
 
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton1.setText("Buscar por Titulo");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(12, 165, 337, 33);
+        jPanel1.setMaximumSize(new java.awt.Dimension(800, 600));
+        jPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
+        jPanel1.setLayout(null);
 
-        jButton2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton2.setText("Buscar por Desarrollador");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(12, 205, 337, 33);
+        jButton11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton11.setText("Buscar por Año de Salida");
+        jPanel1.add(jButton11);
+        jButton11.setBounds(472, 245, 260, 33);
 
-        jButton3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton3.setText("Buscar por Plataforma");
-        getContentPane().add(jButton3);
-        jButton3.setBounds(12, 245, 337, 33);
+        jButton10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton10.setText("Buscar por Modelo");
+        jPanel1.add(jButton10);
+        jButton10.setBounds(472, 205, 260, 33);
+
+        jLabel3.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Buscar Plataformas");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(472, 115, 220, 32);
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Buscar Juegos");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(12, 115, 166, 32);
+
+        jButton9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton9.setText("Buscar por nombre");
+        jPanel1.add(jButton9);
+        jButton9.setBounds(472, 165, 260, 33);
+
+        jButton8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton8.setText("Buscar por Contenido Descargable");
+        jPanel1.add(jButton8);
+        jButton8.setBounds(12, 405, 340, 33);
+
+        jButton7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton7.setText("Buscar por Terminados");
+        jPanel1.add(jButton7);
+        jButton7.setBounds(12, 445, 340, 33);
+
+        jButton6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton6.setText("Buscar por Coperativo");
+        jPanel1.add(jButton6);
+        jButton6.setBounds(12, 365, 340, 33);
+
+        jButton5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton5.setText("Buscar por numero de jugadores");
+        jPanel1.add(jButton5);
+        jButton5.setBounds(12, 325, 340, 33);
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Herramientas de Busqueda");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(66, 13, 623, 62);
 
         jButton4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton4.setText("Buscar por Año de Lanzamiento");
@@ -77,69 +121,48 @@ public class VisualBusqueda extends javax.swing.JFrame{
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(12, 285, 337, 33);
+        jPanel1.add(jButton4);
+        jButton4.setBounds(12, 285, 340, 33);
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Herramientas de Busqueda");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(66, 13, 623, 50);
+        jButton3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton3.setText("Buscar por Plataforma");
+        jPanel1.add(jButton3);
+        jButton3.setBounds(12, 245, 340, 33);
 
-        jButton5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton5.setText("Buscar por numero de jugadores");
-        getContentPane().add(jButton5);
-        jButton5.setBounds(12, 325, 337, 33);
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton2.setText("Buscar por Desarrollador");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(12, 205, 340, 33);
 
-        jButton6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton6.setText("Buscar por Coperativo");
-        getContentPane().add(jButton6);
-        jButton6.setBounds(12, 365, 337, 33);
-
-        jButton7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton7.setText("Buscar por Terminados");
-        getContentPane().add(jButton7);
-        jButton7.setBounds(12, 445, 337, 33);
-
-        jButton8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton8.setText("Buscar por Contenido Descargable");
-        getContentPane().add(jButton8);
-        jButton8.setBounds(12, 405, 337, 33);
-
-        jButton9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton9.setText("Buscar por nombre");
-        getContentPane().add(jButton9);
-        jButton9.setBounds(472, 165, 253, 33);
-
-        jLabel2.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Buscar Juegos");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(12, 115, 166, 32);
-
-        jLabel3.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Buscar Plataformas");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(472, 115, 220, 32);
-
-        jButton10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton10.setText("Buscar por Modelo");
-        getContentPane().add(jButton10);
-        jButton10.setBounds(472, 205, 253, 33);
-
-        jButton11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton11.setText("Buscar por Año de Salida");
-        getContentPane().add(jButton11);
-        jButton11.setBounds(472, 245, 253, 33);
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton1.setText("Buscar por Titulo");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(12, 165, 340, 33);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/fondo.jpg"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        jLabel4.setMaximumSize(new java.awt.Dimension(800, 600));
-        jLabel4.setMinimumSize(new java.awt.Dimension(800, 600));
-        jLabel4.setPreferredSize(new java.awt.Dimension(800, 600));
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(1, -4, 1050, 580);
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(0, 0, 800, 600);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -147,6 +170,14 @@ public class VisualBusqueda extends javax.swing.JFrame{
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       FuncionesDirectorio.buscarTitulo();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        FuncionesDirectorio.buscarDesarrollador();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,5 +230,6 @@ public class VisualBusqueda extends javax.swing.JFrame{
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
