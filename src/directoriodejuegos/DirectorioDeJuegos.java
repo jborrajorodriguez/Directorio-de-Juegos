@@ -1,5 +1,6 @@
 package directoriodejuegos;
 
+import InterfazGrafica.Visual;
 import com.proyecto.elementos.Selector;
 
 /**
@@ -9,8 +10,10 @@ import com.proyecto.elementos.Selector;
 public class DirectorioDeJuegos {
 
     public static void main(String[] args) {
-        Selector menu=new Selector();
-        menu.selector();
+        Visual ventana=new Visual();
+        ventana.setVisible(true);
+//        Selector menu=new Selector();
+//        menu.selector();
         
     }
 
