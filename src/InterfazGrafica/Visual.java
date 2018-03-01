@@ -37,8 +37,12 @@ public class Visual extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(java.awt.SystemColor.activeCaption);
+
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Directorio de Juegos");
+        jLabel1.setToolTipText("");
 
         jButton1.setLabel("Añadir Juego");
 
