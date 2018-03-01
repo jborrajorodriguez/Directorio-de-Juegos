@@ -143,7 +143,7 @@ public class Selector{
                     FuncionesDirectorio.buscarPlataformaAñoSalida();
                     break;
                 case 3:
-                    FuncionesDirectorio.buscarPlataformaPorTipo();
+                    FuncionesDirectorio.buscarPlataformaPorModelo();
                     break;
                 case 0:
                     break;
