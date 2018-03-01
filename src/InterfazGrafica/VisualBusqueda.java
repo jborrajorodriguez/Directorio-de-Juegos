@@ -45,9 +45,14 @@ public class VisualBusqueda extends javax.swing.JFrame{
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Busqueda");
+        setAlwaysOnTop(true);
         setLocation(new java.awt.Point(200, 200));
         setMaximumSize(new java.awt.Dimension(800, 600));
+        setMinimumSize(new java.awt.Dimension(800, 600));
         setPreferredSize(new java.awt.Dimension(800, 600));
+        setResizable(false);
+        setSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(null);
 
         jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
