@@ -18,6 +18,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
      */
     public VisualBusqueda(){
         initComponents();
+        setLocationRelativeTo(null);
         
     }
 
@@ -49,7 +50,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Busqueda");
-        setLocation(new java.awt.Point(200, 200));
+        setLocation(new java.awt.Point(10, 10));
         setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
         setResizable(false);
