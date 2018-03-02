@@ -57,7 +57,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(290, 370, 240, 32);
+        jButton2.setBounds(290, 370, 260, 33);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 62)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -75,7 +75,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(290, 410, 240, 32);
+        jButton4.setBounds(290, 410, 260, 33);
 
         jButton3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton3.setText("Añadir Plataforma");
@@ -85,7 +85,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(290, 290, 240, 32);
+        jButton3.setBounds(290, 290, 260, 33);
 
         jButton5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton5.setText("Juego Terminado");
@@ -95,7 +95,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(290, 450, 240, 32);
+        jButton5.setBounds(290, 450, 260, 33);
 
         jButton6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton6.setText("Añadir juego");
@@ -108,12 +108,17 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(290, 250, 240, 30);
+        jButton6.setBounds(290, 250, 260, 33);
 
         jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton1.setText("Mostrar Platafomas");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1);
-        jButton1.setBounds(290, 330, 240, 30);
+        jButton1.setBounds(290, 330, 260, 33);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/fondo.jpg"))); // NOI18N
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -159,6 +164,10 @@ public class Visual extends javax.swing.JFrame {
         FuncionesDirectorio.modificarTerminado();
         FuncionesDirectorio.guardarFicheros();
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        FuncionesDirectorio.mostrarPlataformas();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
