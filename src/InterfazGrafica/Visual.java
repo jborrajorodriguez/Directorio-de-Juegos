@@ -18,6 +18,7 @@ public class Visual extends javax.swing.JFrame {
      */
     public Visual() {
         initComponents();
+        setLocationRelativeTo(null);
         FuncionesDirectorio.crearFicheros();
     }
 
