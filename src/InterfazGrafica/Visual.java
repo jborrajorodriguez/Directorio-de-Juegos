@@ -63,10 +63,14 @@ public class Visual extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 62)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Directorio de Juegos");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/imagenPrincipal2.png"))); // NOI18N
         jLabel1.setToolTipText("");
+        jLabel1.setInheritsPopupMenu(false);
+        jLabel1.setMaximumSize(new java.awt.Dimension(614, 200));
+        jLabel1.setMinimumSize(new java.awt.Dimension(614, 200));
+        jLabel1.setPreferredSize(new java.awt.Dimension(614, 200));
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(40, 30, 720, 73);
+        jLabel1.setBounds(40, 30, 730, 200);
 
         jButton4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton4.setText("Buscar");

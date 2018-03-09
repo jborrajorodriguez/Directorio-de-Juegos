@@ -82,15 +82,15 @@ public class VisualBusqueda extends javax.swing.JFrame{
 
         jLabel3.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Buscar Plataformas");
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/herramientasdebusqueda3.png"))); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(472, 115, 220, 32);
+        jLabel3.setBounds(440, 110, 350, 40);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Buscar Juegos");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/herramientasdebusqueda2.png"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(12, 115, 166, 32);
+        jLabel2.setBounds(12, 107, 340, 40);
 
         jButton9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton9.setText("Buscar por Nombre");
@@ -144,7 +144,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Herramientas de Busqueda");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/herramientasdebusqueda.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(66, 13, 623, 62);
 
