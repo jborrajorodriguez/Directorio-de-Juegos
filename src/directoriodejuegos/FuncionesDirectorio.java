@@ -207,26 +207,30 @@ public class FuncionesDirectorio{
      * Metodo para buscar juegos por su desarrollador
      *
      */
-    public static void buscarDesarrollador(){
+    public static String buscarDesarrollador(){
+        String desarrolla=" ";
         String desarr=IntroducirDatos.introducirString("Desarrollador del juego a buscar?");
         for(int i=0; i<juegos.size(); i++){
             if(desarr.equalsIgnoreCase(juegos.get(i).getDesarrollador())){
                 System.out.println(juegos.get(i).toString()+"\n");
+                desarrolla=desarrolla+"\n"+juegos.get(i).toString()+"\n";
             }
-        }
+        }return desarrolla;
     }
 
     /**
      * Metodo para buscer juegos segun su plataforma
      *
      */
-    public static void buscarPorPlatadorma(){
+    public static String buscarPorPlatadorma(){
+        String plata=" ";
         String nombre=IntroducirDatos.introducirString("Nombre de la plataforma");
         for(int i=0; i<juegos.size(); i++){
             if(nombre.equalsIgnoreCase(juegos.get(i).getPlataforma().getNombre())){
                 System.out.println(juegos.get(i).toString()+"\n");
+                plata=plata+"\n"+juegos.get(i).toString()+"\n";
             }
-        }
+        }return plata;
     }
 
     /**
