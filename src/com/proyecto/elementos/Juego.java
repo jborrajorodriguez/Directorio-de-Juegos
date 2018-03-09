@@ -7,9 +7,12 @@ package com.proyecto.elementos;
  */
 public class Juego{
 
-    private String titulo, desarrollador, descripcion;
+    private String titulo;
+    private String desarrollador;
+    private String descripcion;
     private Plataforma plataforma;
-    private int añoLanzamiento, njugadores;
+    private int añoLanzamiento; 
+    private int njugadores;
     private String dlcs, co_op, terminado;
 
     public Juego(){
