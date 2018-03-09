@@ -4,7 +4,9 @@ package com.proyecto.elementos;
  */
 public class Plataforma {
     
-   private String nombre,modelo,descripcion;
+   private String nombre;
+   private String modelo;
+   private String descripcion;
    private int añoDeSalida;
 
     public Plataforma() {
