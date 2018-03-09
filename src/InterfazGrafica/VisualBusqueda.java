@@ -47,6 +47,8 @@ public class VisualBusqueda extends javax.swing.JFrame{
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Busqueda");
@@ -68,7 +70,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton11);
-        jButton11.setBounds(472, 245, 260, 33);
+        jButton11.setBounds(472, 245, 260, 32);
 
         jButton10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton10.setText("Buscar por Modelo");
@@ -78,7 +80,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton10);
-        jButton10.setBounds(472, 205, 260, 33);
+        jButton10.setBounds(472, 205, 260, 32);
 
         jLabel3.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -100,7 +102,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton9);
-        jButton9.setBounds(472, 165, 260, 33);
+        jButton9.setBounds(472, 165, 260, 32);
 
         jButton8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton8.setText("Buscar por Contenido Descargable");
@@ -110,7 +112,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton8);
-        jButton8.setBounds(12, 405, 340, 33);
+        jButton8.setBounds(12, 405, 340, 32);
 
         jButton7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton7.setText("Buscar por Terminados");
@@ -120,7 +122,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton7);
-        jButton7.setBounds(12, 445, 340, 33);
+        jButton7.setBounds(12, 445, 340, 32);
 
         jButton6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton6.setText("Buscar por Coperativo");
@@ -130,7 +132,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(12, 365, 340, 33);
+        jButton6.setBounds(12, 365, 340, 32);
 
         jButton5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton5.setText("Buscar por Numero de Jugadores");
@@ -140,7 +142,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(12, 325, 340, 33);
+        jButton5.setBounds(12, 325, 340, 32);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -156,7 +158,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(12, 285, 340, 33);
+        jButton4.setBounds(12, 285, 340, 32);
 
         jButton3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton3.setText("Buscar por Plataforma");
@@ -166,7 +168,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(12, 245, 340, 33);
+        jButton3.setBounds(12, 245, 340, 32);
 
         jButton2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton2.setText("Buscar por Desarrollador");
@@ -176,7 +178,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(12, 205, 340, 33);
+        jButton2.setBounds(12, 205, 340, 32);
 
         jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton1.setText("Buscar por Titulo");
@@ -186,11 +188,24 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(12, 165, 340, 33);
+        jButton1.setBounds(12, 165, 340, 32);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/fondo.jpg"))); // NOI18N
         jPanel1.add(jLabel4);
         jLabel4.setBounds(0, 0, 800, 600);
+
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setBorder(null);
+
+        jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
+        jTextArea1.setColumns(20);
+        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextArea1.setRows(5);
+        jTextArea1.setSelectedTextColor(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(420, 290, 360, 290);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -207,46 +222,59 @@ public class VisualBusqueda extends javax.swing.JFrame{
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        
         FuncionesDirectorio.buscarAñoLanz();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       FuncionesDirectorio.buscarTitulo();
+       
+        FuncionesDirectorio.buscarTitulo();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        FuncionesDirectorio.buscarDesarrollador();
+        jTextArea1.setText(FuncionesDirectorio.buscarDesarrollador());
+        
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        
         FuncionesDirectorio.buscarNumJugadores();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        FuncionesDirectorio.buscarPorPlatadorma();
+        
+        jTextArea1.setText(FuncionesDirectorio.buscarPorPlatadorma());
+       
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+   
         FuncionesDirectorio.buscarCoop();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+  
         FuncionesDirectorio.buscarPorDLC();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    
         FuncionesDirectorio.buscarPorTerminado();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        
         FuncionesDirectorio.buscarPlataformaPorNombre();
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+       
         FuncionesDirectorio.buscarPlataformaPorModelo();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+      
         FuncionesDirectorio.buscarPlataformaAñoSalida();
     }//GEN-LAST:event_jButton11ActionPerformed
 
@@ -302,5 +330,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
