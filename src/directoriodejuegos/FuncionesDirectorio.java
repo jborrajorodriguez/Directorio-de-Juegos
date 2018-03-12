@@ -184,10 +184,11 @@ public class FuncionesDirectorio{
      * Metodo para mostrar todos los juegos que se poseen
      *
      */
-    public static void mostrarJuegos(){
+    public static String mostrarJuegos(){
+        String valor="";
         for(int i=0; i<juegos.size(); i++){
-            System.out.println(juegos.get(i).getTitulo()+" "+juegos.get(i).getDesarrollador()+" "+juegos.get(i).getPlataforma().getNombre());
-        }
+           valor=valor+"\n"+juegos.get(i).getTitulo()+": Desarrollador : "+juegos.get(i).getDesarrollador()+" Plataforma : "+juegos.get(i).getPlataforma().getNombre()+"\n";
+        }return valor;
     }
 
     /**
@@ -257,10 +258,11 @@ public class FuncionesDirectorio{
      * ArrayList
      *
      */
-    public static void mostrarPlataformas(){
+    public static String mostrarPlataformas(){
+        String valor="";
         for(int i=0; i<plataformas.size(); i++){
-            System.out.println(plataformas.get(i).getNombre()+" "+plataformas.get(i).getModelo());
-        }
+            valor=valor+"\n"+"Nombre : "+plataformas.get(i).getNombre()+" "+plataformas.get(i).getModelo()+"\n";
+        }return valor;
 
     }
 
