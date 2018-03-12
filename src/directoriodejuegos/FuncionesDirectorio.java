@@ -385,12 +385,12 @@ public class FuncionesDirectorio{
      *
      */
     public static String buscarCoop(){
-        String respuesta=" ";
+        String respuesta="";
         String coop=IntroducirDatos.introducirString("Tiene cooperativo?");
         for(int i=0; i<juegos.size(); i++){
-            if(juegos.get(i).getCo_op()==coop){
+            if(juegos.get(i).getCo_op().equals(coop)){
                 System.out.println(juegos.get(i).toString()+"\n");
-                respuesta=juegos.get(i).toString()+"\n";
+                respuesta=respuesta+juegos.get(i).toString()+"\n";
             }
         }return respuesta;
     }
