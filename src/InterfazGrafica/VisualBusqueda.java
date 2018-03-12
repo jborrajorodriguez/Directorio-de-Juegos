@@ -19,7 +19,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
     public VisualBusqueda(){
         initComponents();
         setLocationRelativeTo(null);
-        
+
     }
 
     /**
@@ -48,13 +48,13 @@ public class VisualBusqueda extends javax.swing.JFrame{
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Busqueda");
         setLocation(new java.awt.Point(10, 10));
         setMaximumSize(new java.awt.Dimension(1024, 768));
         setMinimumSize(new java.awt.Dimension(1024, 768));
-        setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
         setSize(new java.awt.Dimension(1024, 768));
 
@@ -202,6 +202,10 @@ public class VisualBusqueda extends javax.swing.JFrame{
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(460, 340, 530, 370);
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/Fondo.png"))); // NOI18N
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(0, 0, 1030, 770);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -217,60 +221,51 @@ public class VisualBusqueda extends javax.swing.JFrame{
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        
-        FuncionesDirectorio.buscarAñoLanz();
+
+        jTextArea1.setText(FuncionesDirectorio.buscarAñoLanz());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-        FuncionesDirectorio.buscarTitulo();
+
+        jTextArea1.setText(FuncionesDirectorio.buscarTitulo());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         jTextArea1.setText(FuncionesDirectorio.buscarDesarrollador());
-        
-        
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        
-        FuncionesDirectorio.buscarNumJugadores();
+        jTextArea1.setText(FuncionesDirectorio.buscarNumJugadores());
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        
         jTextArea1.setText(FuncionesDirectorio.buscarPorPlatadorma());
-       
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-   
-        FuncionesDirectorio.buscarCoop();
+        jTextArea1.setText(FuncionesDirectorio.buscarCoop());
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-  
-        FuncionesDirectorio.buscarPorDLC();
+        jTextArea1.setText(FuncionesDirectorio.buscarPorDLC());
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-    
-        FuncionesDirectorio.buscarPorTerminado();
+        jTextArea1.setText(FuncionesDirectorio.buscarPorTerminado());
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        
-        FuncionesDirectorio.buscarPlataformaPorNombre();
+        jTextArea1.setText(FuncionesDirectorio.buscarPlataformaPorNombre());
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-       
-        FuncionesDirectorio.buscarPlataformaPorModelo();
+        jTextArea1.setText(FuncionesDirectorio.buscarPlataformaPorModelo());
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-      
-        FuncionesDirectorio.buscarPlataformaAñoSalida();
+        jTextArea1.setText(FuncionesDirectorio.buscarPlataformaAñoSalida());
     }//GEN-LAST:event_jButton11ActionPerformed
 
     /**
@@ -323,6 +318,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;

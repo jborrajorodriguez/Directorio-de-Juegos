@@ -195,13 +195,15 @@ public class FuncionesDirectorio{
      * Metodo para buscar los juegos por titulo
      *
      */
-    public static void buscarTitulo(){
+    public static String buscarTitulo(){
+        String respuesta=" ";
         String titulo=IntroducirDatos.introducirString("Titulo del juego a buscar?");
         for(int i=0; i<juegos.size(); i++){
             if(titulo.equalsIgnoreCase(juegos.get(i).getTitulo())){
-                Display.mostrarMensaje(juegos.get(i).toString()+"\n");
+                //Display.mostrarMensaje(juegos.get(i).toString()+"\n");
+                respuesta=juegos.get(i).toString()+"\n";
             }
-        }
+        }return respuesta;
     }
 
     /**
@@ -271,15 +273,16 @@ public class FuncionesDirectorio{
      * los que coincidan.
      *
      */
-    public static void buscarPlataformaAñoSalida(){
+    public static String buscarPlataformaAñoSalida(){
+        String respuesta=" ";
         int año=IntroducirDatos.introducirInt("Año de salida que quieres buscar");
         for(int i=0; i<plataformas.size(); i++){
             if(plataformas.get(i).getAñoDeSalida()==año){
                 //System.out.println(plataforma.get(i).toString());
-                Display.mostrarMensaje(plataformas.get(i).toString()+"\n");
-
+                System.out.println(plataformas.get(i).toString()+"\n");
+                respuesta=respuesta+plataformas.get(i).toString()+"\n";
             }
-        }
+        }return respuesta;
 
     }
 
@@ -289,15 +292,16 @@ public class FuncionesDirectorio{
      * Este metodo muestra las plataformas que coincidan con el nombre indicado.
      *
      */
-    public static void buscarPlataformaPorNombre(){
+    public static String buscarPlataformaPorNombre(){
+        String respuesta=" ";
         String nombre=IntroducirDatos.introducirString("Nombre de la Plataforma");
         for(int i=0; i<plataformas.size(); i++){
             if(plataformas.get(i).getNombre().equalsIgnoreCase(nombre)){
                 //System.out.println(plataforma.get(i).toString());
-                Display.mostrarMensaje(plataformas.get(i).toString()+"\n");
-
+                //Display.mostrarMensaje(plataformas.get(i).toString()+"\n");
+                respuesta=respuesta+plataformas.get(i).toString()+"\n";
             }
-        }
+        }return respuesta;
 
     }
 
@@ -307,15 +311,16 @@ public class FuncionesDirectorio{
      * Este método muestra las plataformas que coincidan con el tipo indicado.
      *
      */
-    public static void buscarPlataformaPorModelo(){
+    public static String buscarPlataformaPorModelo(){
+        String respuesta=" ";
         String tipo=IntroducirDatos.introducirString("Modelo de la Plataforma");
         for(int i=0; i<plataformas.size(); i++){
             if(plataformas.get(i).getModelo().equalsIgnoreCase(tipo)){
                 //System.out.println(plataforma.get(i).toString());
-                Display.mostrarMensaje(plataformas.get(i).toString()+"\n");
-
+                //Display.mostrarMensaje(plataformas.get(i).toString()+"\n");
+                respuesta=respuesta+plataformas.get(i).toString()+"\n";
             }
-        }
+        }return respuesta;
 
     }
 
@@ -345,27 +350,31 @@ public class FuncionesDirectorio{
      * introducido con el numero de jugadores de los juegos registrados.
      *
      */
-    public static void buscarNumJugadores(){
+    public static String buscarNumJugadores(){
+        String respuesta=" ";
         int njugadores=IntroducirDatos.introducirInt("Introduce número de jugadores.");
         for(int i=0; i<juegos.size(); i++){
             if(juegos.get(i).getNjugadores()==njugadores){
                 System.out.println(juegos.get(i).toString()+"\n");
+                respuesta=juegos.get(i).toString()+"\n";
             }
 
-        }
+        }return respuesta;
     }
 
     /**
      * Metodo para buscar los metodos por su año de lazamiento
      *
      */
-    public static void buscarAñoLanz(){
+    public static String buscarAñoLanz(){
+        String respuesta=" ";
         int año=IntroducirDatos.introducirInt("Año de lanzamiento del juego buscar?");
         for(int i=0; i<juegos.size(); i++){
             if(juegos.get(i).getAñoLanzamiento()==año){
                 System.out.println(juegos.get(i).toString()+"\n");
+                respuesta=juegos.get(i).toString()+"\n";
             }
-        }
+        }return respuesta;
     }
 
     /**
@@ -375,13 +384,15 @@ public class FuncionesDirectorio{
      * valor dlc de juegos .
      *
      */
-    public static void buscarCoop(){
+    public static String buscarCoop(){
+        String respuesta="";
         String coop=IntroducirDatos.introducirString("Tiene cooperativo?");
         for(int i=0; i<juegos.size(); i++){
-            if(juegos.get(i).getCo_op()==coop){
+            if(juegos.get(i).getCo_op().equals(coop)){
                 System.out.println(juegos.get(i).toString()+"\n");
+                respuesta=respuesta+juegos.get(i).toString()+"\n";
             }
-        }
+        }return respuesta;
     }
 
     /**
@@ -391,23 +402,25 @@ public class FuncionesDirectorio{
      * la clase Juego
      *
      */
-    public static void buscarPorTerminado(){
-
+    public static String buscarPorTerminado(){
+        String respuesta=" ";
         String terminado=IntroducirDatos.introducirString("Tienes acabado el juego?");
         if(terminado.equalsIgnoreCase("Si")){
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getTerminado().equalsIgnoreCase(terminado)){
                     System.out.println(juegos.get(i).toString()+"\n");
+                    respuesta=juegos.get(i).toString()+"\n";
                 }
             }
         }else{
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getTerminado().equalsIgnoreCase(terminado)){
                     System.out.println(juegos.get(i).toString()+"\n");
+                    respuesta=juegos.get(i).toString()+"\n";
                 }
 
             }
-        }
+        }return respuesta;
     }
 
     /**
@@ -417,23 +430,25 @@ public class FuncionesDirectorio{
      * clase Juego
      *
      */
-    public static void buscarPorDLC(){
-
+    public static String buscarPorDLC(){
+        String respuesta=" ";
         String dlc=IntroducirDatos.introducirString("El juego tiene Dlc?");
         if(dlc.equalsIgnoreCase("Si")){
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getDlcs().equalsIgnoreCase(dlc)){
                     System.out.println(juegos.get(i).toString()+"\n");
+                    respuesta=juegos.get(i).toString()+"\n";
                 }
             }
         }else{
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getDlcs().equalsIgnoreCase(dlc)){
                     System.out.println(juegos.get(i).toString()+"\n");
+                    respuesta=juegos.get(i).toString()+"\n";
                 }
 
             }
-        }
+        }return respuesta;
     }
 
     /**
