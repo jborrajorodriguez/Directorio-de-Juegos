@@ -48,6 +48,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Busqueda");
@@ -201,6 +202,10 @@ public class VisualBusqueda extends javax.swing.JFrame{
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(460, 340, 530, 370);
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/Fondo.png"))); // NOI18N
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(0, 0, 1030, 770);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -236,9 +241,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
         jTextArea1.setText(FuncionesDirectorio.buscarPorPlatadorma());
-
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -315,6 +318,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
