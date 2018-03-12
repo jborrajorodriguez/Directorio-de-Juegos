@@ -39,15 +39,19 @@ public class Visual extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Directorio de Juegos");
         setLocation(new java.awt.Point(190, 190));
         setMaximumSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
 
-        jPanel1.setBackground(java.awt.SystemColor.activeCaption);
+        jPanel1.setBackground(new java.awt.Color(0, 0, 153));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1024, 768));
+        jPanel1.setRequestFocusEnabled(false);
         jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 62)); // NOI18N
@@ -60,7 +64,7 @@ public class Visual extends javax.swing.JFrame {
         jLabel1.setMinimumSize(new java.awt.Dimension(614, 200));
         jLabel1.setPreferredSize(new java.awt.Dimension(614, 200));
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(40, 30, 730, 200);
+        jLabel1.setBounds(170, 20, 730, 200);
 
         jButton2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton2.setText("Mostrar Juegos");
@@ -70,7 +74,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(260, 370, 260, 33);
+        jButton2.setBounds(100, 440, 260, 33);
 
         jButton4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton4.setText("Buscar");
@@ -80,7 +84,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(260, 410, 260, 33);
+        jButton4.setBounds(100, 480, 260, 33);
 
         jButton3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton3.setText("Añadir Plataforma");
@@ -90,7 +94,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(260, 290, 260, 33);
+        jButton3.setBounds(100, 360, 260, 33);
 
         jButton5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton5.setText("Juego Terminado");
@@ -100,7 +104,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(260, 450, 260, 33);
+        jButton5.setBounds(100, 520, 260, 33);
 
         jButton6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton6.setText("Añadir juego");
@@ -113,7 +117,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(260, 250, 260, 33);
+        jButton6.setBounds(100, 320, 260, 33);
 
         jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton1.setText("Mostrar Platafomas");
@@ -123,23 +127,25 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(260, 330, 260, 33);
+        jButton1.setBounds(100, 400, 260, 33);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/fondo.jpg"))); // NOI18N
-        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(0, 0, 800, 600);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(550, 200, 440, 470);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
@@ -217,7 +223,8 @@ public class Visual extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
