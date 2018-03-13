@@ -70,7 +70,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton11);
-        jButton11.setBounds(600, 280, 260, 33);
+        jButton11.setBounds(600, 280, 260, 32);
 
         jButton10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton10.setText("Buscar por Modelo");
@@ -80,17 +80,17 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton10);
-        jButton10.setBounds(600, 240, 260, 33);
+        jButton10.setBounds(600, 240, 260, 32);
 
         jLabel3.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/herramientasdebusqueda3.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("/home/local/DANIELCASTELAO/jborrajorodriguez/Escritorio/Win7/Plataforma.png")); // NOI18N
         jPanel1.add(jLabel3);
         jLabel3.setBounds(550, 140, 350, 40);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/herramientasdebusqueda2.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("/home/local/DANIELCASTELAO/jborrajorodriguez/Escritorio/Win7/Juego.png")); // NOI18N
         jPanel1.add(jLabel2);
         jLabel2.setBounds(30, 140, 340, 40);
 
@@ -102,7 +102,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton9);
-        jButton9.setBounds(600, 200, 260, 33);
+        jButton9.setBounds(600, 200, 260, 32);
 
         jButton8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton8.setText("Buscar por Contenido Descargable");
@@ -112,7 +112,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton8);
-        jButton8.setBounds(30, 440, 340, 33);
+        jButton8.setBounds(30, 440, 340, 32);
 
         jButton7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton7.setText("Buscar por Terminados");
@@ -122,7 +122,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton7);
-        jButton7.setBounds(30, 480, 340, 33);
+        jButton7.setBounds(30, 480, 340, 32);
 
         jButton6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton6.setText("Buscar por Coperativo");
@@ -132,7 +132,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(30, 400, 340, 33);
+        jButton6.setBounds(30, 400, 340, 32);
 
         jButton5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton5.setText("Buscar por Numero de Jugadores");
@@ -142,7 +142,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(30, 360, 340, 33);
+        jButton5.setBounds(30, 360, 340, 32);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -158,7 +158,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(30, 320, 340, 33);
+        jButton4.setBounds(30, 320, 340, 32);
 
         jButton3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton3.setText("Buscar por Plataforma");
@@ -168,7 +168,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(30, 280, 340, 33);
+        jButton3.setBounds(30, 280, 340, 32);
 
         jButton2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton2.setText("Buscar por Desarrollador");
@@ -178,7 +178,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(30, 240, 340, 33);
+        jButton2.setBounds(30, 240, 340, 32);
 
         jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton1.setText("Buscar por Titulo");
@@ -188,7 +188,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(30, 200, 340, 33);
+        jButton1.setBounds(30, 200, 340, 32);
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setBorder(null);
