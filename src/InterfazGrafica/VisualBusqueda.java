@@ -86,7 +86,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setIcon(new javax.swing.ImageIcon("/home/local/DANIELCASTELAO/jborrajorodriguez/Escritorio/Win7/Plataforma.png")); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(550, 140, 350, 40);
+        jLabel3.setBounds(550, 140, 360, 40);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
