@@ -102,7 +102,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/InterfazGrafica/herramientasdebusqueda3.png"/>
+              <Image iconType="2" name="/home/local/DANIELCASTELAO/jborrajorodriguez/Escritorio/Win7/Plataforma.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -120,7 +120,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/InterfazGrafica/herramientasdebusqueda2.png"/>
+              <Image iconType="2" name="/home/local/DANIELCASTELAO/jborrajorodriguez/Escritorio/Win7/Juego.png"/>
             </Property>
           </Properties>
           <Constraints>
