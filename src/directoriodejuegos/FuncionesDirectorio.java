@@ -213,7 +213,7 @@ public class FuncionesDirectorio{
         for(int i=0; i<juegos.size(); i++){
             if(titulo.equalsIgnoreCase(juegos.get(i).getTitulo())){
                 //Display.mostrarMensaje(juegos.get(i).toString()+"\n");
-                respuesta=respuesta+juegos.get(i).toString()+"\n";
+                respuesta=respuesta+"\n"+juegos.get(i).toString()+"\n";
             }
         }
         return respuesta;
@@ -299,7 +299,7 @@ public class FuncionesDirectorio{
         for(int i=0; i<plataformas.size(); i++){
             if(plataformas.get(i).getAñoDeSalida()==año){
                 System.out.println(plataformas.get(i).toString()+"\n");
-                respuesta=respuesta+plataformas.get(i).toString()+"\n";
+                respuesta=respuesta+"\n"+plataformas.get(i).toString()+"\n";
             }
         }
         return respuesta;
@@ -320,7 +320,7 @@ public class FuncionesDirectorio{
             if(plataformas.get(i).getNombre().equalsIgnoreCase(nombre)){
                 //System.out.println(plataforma.get(i).toString());
                 //Display.mostrarMensaje(plataformas.get(i).toString()+"\n");
-                respuesta=respuesta+plataformas.get(i).toString()+"\n";
+                respuesta=respuesta+"\n"+plataformas.get(i).toString()+"\n";
             }
         }
         return respuesta;
@@ -341,7 +341,7 @@ public class FuncionesDirectorio{
             if(plataformas.get(i).getModelo().equalsIgnoreCase(tipo)){
                 //System.out.println(plataforma.get(i).toString());
                 //Display.mostrarMensaje(plataformas.get(i).toString()+"\n");
-                respuesta=respuesta+plataformas.get(i).toString()+"\n";
+                respuesta=respuesta+"\n"+plataformas.get(i).toString()+"\n";
             }
         }
         return respuesta;
@@ -381,7 +381,7 @@ public class FuncionesDirectorio{
         for(int i=0; i<juegos.size(); i++){
             if(juegos.get(i).getNjugadores()==njugadores){
                 System.out.println(juegos.get(i).toString()+"\n");
-                respuesta=respuesta+juegos.get(i).toString()+"\n";
+                respuesta=respuesta+"\n"+juegos.get(i).toString()+"\n";
             }
 
         }
@@ -399,7 +399,7 @@ public class FuncionesDirectorio{
         for(int i=0; i<juegos.size(); i++){
             if(juegos.get(i).getAñoLanzamiento()==año){
                 System.out.println(juegos.get(i).toString()+"\n");
-                respuesta=respuesta+juegos.get(i).toString()+"\n";
+                respuesta=respuesta+"\n"+juegos.get(i).toString()+"\n";
             }
         }
         return respuesta;
@@ -418,7 +418,7 @@ public class FuncionesDirectorio{
         for(int i=0; i<juegos.size(); i++){
             if(juegos.get(i).getCo_op().equals(coop)){
                 System.out.println(juegos.get(i).toString()+"\n");
-                respuesta=respuesta+juegos.get(i).toString()+"\n";
+                respuesta=respuesta+"\n"+juegos.get(i).toString()+"\n";
             }
         }
         return respuesta;
@@ -439,14 +439,14 @@ public class FuncionesDirectorio{
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getTerminado().equalsIgnoreCase(terminado)){
                     System.out.println(juegos.get(i).toString()+"\n");
-                    respuesta=respuesta+juegos.get(i).toString()+"\n";
+                    respuesta=respuesta+"\n"+juegos.get(i).toString()+"\n";
                 }
             }
         }else{
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getTerminado().equalsIgnoreCase(terminado)){
                     System.out.println(juegos.get(i).toString()+"\n");
-                    respuesta=respuesta+juegos.get(i).toString()+"\n";
+                    respuesta=respuesta+"\n"+juegos.get(i).toString()+"\n";
                 }
 
             }
@@ -469,14 +469,14 @@ public class FuncionesDirectorio{
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getDlcs().equalsIgnoreCase(dlc)){
                     System.out.println(juegos.get(i).toString()+"\n");
-                    respuesta=respuesta+juegos.get(i).toString()+"\n";
+                    respuesta=respuesta+"\n"+juegos.get(i).toString()+"\n";
                 }
             }
         }else{
             for(int i=0; i<juegos.size(); i++){
                 if(juegos.get(i).getDlcs().equalsIgnoreCase(dlc)){
                     System.out.println(juegos.get(i).toString()+"\n");
-                    respuesta=respuesta+juegos.get(i).toString()+"\n";
+                    respuesta=respuesta+"\n"+juegos.get(i).toString()+"\n";
                 }
 
             }
