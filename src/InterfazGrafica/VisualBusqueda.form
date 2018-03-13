@@ -102,12 +102,12 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="/home/local/DANIELCASTELAO/jborrajorodriguez/Escritorio/Win7/Plataforma.png"/>
+              <Image iconType="3" name="/InterfazGrafica/Plataforma.png"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="550" y="140" width="360" height="40"/>
+              <AbsoluteConstraints x="560" y="130" width="410" height="50"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -120,7 +120,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="/home/local/DANIELCASTELAO/jborrajorodriguez/Escritorio/Win7/Juego.png"/>
+              <Image iconType="3" name="/InterfazGrafica/Juego.png"/>
             </Property>
           </Properties>
           <Constraints>
