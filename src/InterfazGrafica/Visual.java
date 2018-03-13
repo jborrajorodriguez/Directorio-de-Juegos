@@ -181,7 +181,7 @@ public class Visual extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        FuncionesDirectorio.modificarTerminado();
+        jTextArea1.setText(FuncionesDirectorio.modificarTerminado());
         FuncionesDirectorio.guardarFicheros();
     }//GEN-LAST:event_jButton5ActionPerformed
 
