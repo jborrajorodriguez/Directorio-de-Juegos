@@ -39,6 +39,7 @@ public class Visual extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -74,7 +75,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(100, 440, 260, 33);
+        jButton2.setBounds(70, 400, 260, 33);
 
         jButton4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton4.setText("Buscar");
@@ -84,7 +85,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(100, 480, 260, 33);
+        jButton4.setBounds(70, 440, 260, 33);
 
         jButton3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton3.setText("Añadir Plataforma");
@@ -94,7 +95,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(100, 360, 260, 33);
+        jButton3.setBounds(70, 320, 260, 33);
 
         jButton5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton5.setText("Juego Terminado");
@@ -104,7 +105,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(100, 520, 260, 33);
+        jButton5.setBounds(70, 480, 260, 33);
 
         jButton6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton6.setText("Añadir juego");
@@ -117,7 +118,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(100, 320, 260, 33);
+        jButton6.setBounds(70, 280, 260, 33);
 
         jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton1.setText("Mostrar Platafomas");
@@ -127,7 +128,11 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(100, 400, 260, 33);
+        jButton1.setBounds(70, 360, 260, 33);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/Logo.png"))); // NOI18N
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(40, 530, 320, 200);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/Fondo.png"))); // NOI18N
         jPanel1.add(jLabel2);
@@ -234,6 +239,7 @@ public class Visual extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;

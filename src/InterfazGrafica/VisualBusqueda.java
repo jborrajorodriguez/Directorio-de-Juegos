@@ -48,6 +48,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -202,6 +203,11 @@ public class VisualBusqueda extends javax.swing.JFrame{
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(460, 340, 530, 370);
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/Logo.png"))); // NOI18N
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(40, 530, 320, 200);
+        jLabel5.getAccessibleContext().setAccessibleDescription("");
+
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/Fondo.png"))); // NOI18N
         jPanel1.add(jLabel4);
         jLabel4.setBounds(0, 0, 1030, 770);
@@ -319,6 +325,7 @@ public class VisualBusqueda extends javax.swing.JFrame{
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
