@@ -39,6 +39,7 @@ public class Visual extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -75,7 +76,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2);
-        jButton2.setBounds(70, 400, 260, 33);
+        jButton2.setBounds(70, 340, 260, 33);
 
         jButton4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton4.setText("Buscar");
@@ -85,7 +86,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(70, 440, 260, 33);
+        jButton4.setBounds(70, 380, 260, 33);
 
         jButton3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton3.setText("Añadir Plataforma");
@@ -95,7 +96,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(70, 320, 260, 33);
+        jButton3.setBounds(70, 260, 260, 33);
 
         jButton5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton5.setText("Juego Terminado");
@@ -105,7 +106,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5);
-        jButton5.setBounds(70, 480, 260, 33);
+        jButton5.setBounds(70, 420, 260, 33);
 
         jButton6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton6.setText("Añadir juego");
@@ -118,7 +119,7 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton6);
-        jButton6.setBounds(70, 280, 260, 33);
+        jButton6.setBounds(70, 220, 260, 33);
 
         jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton1.setText("Mostrar Platafomas");
@@ -128,7 +129,20 @@ public class Visual extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(70, 360, 260, 33);
+        jButton1.setBounds(70, 300, 260, 33);
+
+        jButton7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton7.setText("Borrar entrada");
+        jButton7.setMaximumSize(new java.awt.Dimension(185, 33));
+        jButton7.setMinimumSize(new java.awt.Dimension(182, 33));
+        jButton7.setPreferredSize(new java.awt.Dimension(185, 33));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton7);
+        jButton7.setBounds(70, 460, 260, 33);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazGrafica/Logo.png"))); // NOI18N
         jPanel1.add(jLabel5);
@@ -171,7 +185,7 @@ public class Visual extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-       FuncionesDirectorio.añadirJuego();
+       jTextArea1.setText(FuncionesDirectorio.añadirJuego());
        FuncionesDirectorio.guardarJuegos();
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -194,6 +208,11 @@ public class Visual extends javax.swing.JFrame {
        
         jTextArea1.setText(FuncionesDirectorio.mostrarPlataformas());
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        jTextArea1.setText(FuncionesDirectorio.eliminarEntrada());
+        FuncionesDirectorio.guardarFicheros();
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,6 +256,7 @@ public class Visual extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;

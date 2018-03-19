@@ -8,6 +8,7 @@ import com.proyecto.introducirdatos.IntroducirDatos;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -28,8 +29,11 @@ public class FuncionesDirectorio{
     /**
      * Metodo para añadir un nuevo juego
      *
+     * @return Devuelve un mensaje de información
      */
-    public static void añadirJuego(){
+    public static String añadirJuego(){
+        int marca=0;
+        String mensaje="";
         String tit=IntroducirDatos.introducirString("Titulo del juego");
         String des=IntroducirDatos.introducirString("Desarrollador del juego");
         String descr=IntroducirDatos.introducirString("Introduce una descripcion");
@@ -49,6 +53,14 @@ public class FuncionesDirectorio{
             term=IntroducirDatos.introducirString("Has finalizado el juego? Introduce Si o No");
         }while(!"si".equalsIgnoreCase(term)&&!"no".equalsIgnoreCase(term));
         juegos.add(new Juego(tit, des, descr, plat, añlan, njug, dlc, coop, term));
+        marca=1;
+        if(marca==0){
+            mensaje=("No se ha registrado ningún juego");
+        }else{
+            mensaje=("Juego registrado");
+        }
+        return mensaje;
+
     }
 
     /**
@@ -106,6 +118,64 @@ public class FuncionesDirectorio{
             FuncionesDirectorio.guardarJuegos();
         }
 
+    }
+
+    /**
+     *
+     * Metodo que permite seleccionar un juego o plataforma para ser borrado,
+     * además pide una verificación antes de eliminarlo
+     *
+     * @return
+     */
+    public static String eliminarEntrada(){
+        int select;
+        String comfirm;
+        String nom;
+        int flag=0;
+        String mensaje="";
+        do{
+            select=IntroducirDatos.introducirInt("1-- Borrar un Juego"
+                    +"\n2-- Borrar una Plataforma"
+                    +"\n0-- Salir");
+
+            switch(select){
+                case 1:
+                    nom=IntroducirDatos.introducirString("Introduce el titulo del juego a borrar");
+                    for(int i=0; i<juegos.size(); i++){
+                        if(nom.equalsIgnoreCase(juegos.get(i).getTitulo())){
+                            comfirm=IntroducirDatos.introducirString("Seguro que quiere borrar el juego "+juegos.get(i).getTitulo());
+                            if(comfirm.equalsIgnoreCase("si")){
+                                juegos.remove(i);
+                                flag=1;
+                            }
+                        }
+                    }
+                    if(flag==1){
+                        mensaje="Juego eliminado";
+                    }else{
+                        mensaje="No se ha borrado nada";
+                    }
+                    return mensaje;
+                case 2:
+                    nom=IntroducirDatos.introducirString("Introduce el modelo del la plataforma a borrar");
+                    for(int i=0; i<plataformas.size(); i++){
+                        if(nom.equalsIgnoreCase(plataformas.get(i).getModelo())){
+                            comfirm=IntroducirDatos.introducirString("Seguro que quiere borrar la plataforma "+plataformas.get(i).getModelo());
+                            if(comfirm.equalsIgnoreCase("si")){
+                                plataformas.remove(i);
+                                flag=1;
+                            }
+                        }
+                    }
+                    if(flag==1){
+                        mensaje="Plataforma eliminada";
+                    }else{
+                        mensaje="No se ha borrado nada";
+                    }
+                    return mensaje;
+            }
+        }while(select!=0);
+        return mensaje;
     }
 
     /**
@@ -501,8 +571,10 @@ public class FuncionesDirectorio{
             }
         }
         if(flag==true){
-            return("El juego ha sido marcado como terminado");
-        }else return("No existe ese juego");
+            return ("El juego ha sido marcado como terminado");
+        }else{
+            return ("No existe ese juego");
+        }
 
     }
 }
