@@ -1,4 +1,4 @@
-# Directorio-de-Juegos
+<h1># Directorio-de-Juegos</h1>
 Proyecto de programacion de 2º Evaluación en el cual participan Arturo y Juan
 
 La libreria necesaria para el correcto funcionamiento del programa se encuentra en el siguiente repositorio:
